@@ -25,14 +25,14 @@ function randomColor()
         randomColorButton.style.backgroundColor = color;
     }
     setColor(color);
-
 }
 
 function rgbButton()
 {
-    
-    randomColor()
+    let red = Math.round(Math.random() * 255);
+    let green = Math.round(Math.random() * 255);
+    let blue = Math.round(Math.random() * 255);
+    let color =  `rgb(${red}, ${green}, ${blue})`;
+    setColor(color);
     transitionTimer = setTimeout(rgbButton, 2000);
-
-
 }
