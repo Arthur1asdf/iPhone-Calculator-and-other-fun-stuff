@@ -17,6 +17,12 @@
       #rgb {
         transition: 5s;
       }
+      #jumpScare {
+        display: none;
+        text-align: center;
+        color: black;
+        padding-top: 5%;
+      }
       button {
         border-radius: 5px;
         width: 100px;
@@ -26,14 +32,15 @@
     </style>
   </head>
   <body>
-    <h3>hello my name is Arthur</h3>
+    <h3>Some fun buttons to press</h3>
     <button id="green" onclick="setColor('green')">Green</button>
     <button id="red" onclick="setColor('red')">Red</button>
     <button id="blue" onclick="setColor('blue')">Blue</button>
     <button id="random" onclick="randomColor()">Random</button>
     <button onclick="setColor('white')">Default</button>
-    <button id="" onclick="rgbButton()">rgbButton</button>
-
+    <button onclick="rgbButton()">rgbButton</button>
+    <button onclick="imageButton()">funny pic</button>
+    <h3 id="jumpScare">har, har, har-har, har, har,har-har, har-har</h4>
     <script src="index.js"></script>
   </body>
 </html>
