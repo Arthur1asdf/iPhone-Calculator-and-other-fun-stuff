@@ -10,7 +10,7 @@ function checkTransitionTimer()
 }
 function setColor(name)
 {
-    body.style.backgroundImage ='none';
+    freddyGif.style.display ='none';
     jumpScare.style.display = 'none';
     checkTransitionTimer();
     body.style.backgroundColor = name;
@@ -38,11 +38,11 @@ function rgbButton()
     transitionTimer = setTimeout(rgbButton, 2000);
 }
 var jumpScare = document.getElementById("jumpScare");
+var freddyGif = document.getElementById("freddyGif");
 function imageButton()
 {
-    body.style.backgroundRepeat = "no-repeat";
-    body.style.backgroundPosition = "center top";
-    body.style.backgroundImage ="url('/company/imagesForButton/fnafbeat.jpg')";
+    freddyGif.style.display = "block";
     jumpScare.style.display = "block";
+    checkTransitionTimer();
     
 }
