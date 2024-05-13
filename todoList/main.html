@@ -6,16 +6,23 @@
     <title>TODO List</title>
     <style>
       #items {
-        background-color: aqua;
-        width: 20%;
+        background-color: gray;
+        width: 100%;
       }
       #items2 {
         background-color: black;
+        color: white;
       }
-      #mondayContainer {
+
+      .dayContainer {
         background-color: gray;
-        width: 20%;
+        width: 23%;
+        display: inline-block;
+        margin-right: 1%;
+        margin-bottom: 3%;
+        vertical-align: top;
       }
+
       #itemInput {
         padding: 8px;
         font-size: 20px;
@@ -39,35 +46,58 @@
       #addItemBlock {
         display: block;
       }
+      .test {
+        display: inline-block;
+      }
     </style>
   </head>
   <body>
     <h1>TODO List</h1>
-    <div id="mondayContainer">
+
+    <div id="mondayContainer" class="dayContainer">
       <h2 class="weekdayItems">Monday Items</h2>
+      <div id="items"></div>
     </div>
-    <div id="items"></div>
-    <h2 class="weekdayItems">Tuesday Items</h2>
-    <div id="items2"></div>
-    <h2 class="weekdayItems">Wednesday Items</h2>
-    <div id="items3"></div>
-    <h2 class="weekdayItems">Thursday Items</h2>
-    <div id="items4"></div>
-    <h2 class="weekdayItems">Friday Items</h2>
-    <div id="items5"></div>
-    <h2 class="weekdayItems">Saturday Items</h2>
-    <div id="items6"></div>
-    <h2 class="weekdayItems">Sunday Items</h2>
-    <div id="items7"></div>
+
+    <div id="tuesdayContainer" class="dayContainer">
+      <h2 class="weekdayItems">Tuesday Items</h2>
+      <div id="items2"></div>
+    </div>
+
+    <div id="wednesdayContainer" class="dayContainer">
+      <h2 class="weekdayItems">Wednesday Items</h2>
+      <div id="items3"></div>
+    </div>
+
+    <div id="thursdayContainer" class="dayContainer">
+      <h2 class="weekdayItems">Thursday Items</h2>
+      <div id="items4"></div>
+    </div>
+
+    <div id="fridayContainer" class="dayContainer">
+      <h2 class="weekdayItems">Friday Items</h2>
+      <div id="items5"></div>
+    </div>
+
+    <div id="saturdayContainer" class="dayContainer">
+      <h2 class="weekdayItems">Saturday Items</h2>
+      <div id="items6"></div>
+    </div>
+
+    <div id="sundayContainer" class="dayContainer">
+      <h2 class="weekdayItems">Sunday Items</h2>
+      <div id="items7"></div>
+    </div>
+
     <div id="addItemBlock">
-      <select name="cars" id="weekSelector">
+      <select name="week" id="daySelector">
         <option value="monday">Monday</option>
         <option value="tuesday">Tuesday</option>
         <option value="wednesday">Wednesday</option>
         <option value="thursday">Thursday</option>
         <option value="friday">Friday</option>
         <option value="saturday">Saturday</option>
-        <option value="sunday">Sund</option>
+        <option value="sunday">Sunday</option>
       </select>
       <input id="itemInput" type="text" placeholder="Add an item" />
       <button id="addItemButton" onclick="addItem()">Add items</button>
