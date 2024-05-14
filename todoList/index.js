@@ -1,4 +1,4 @@
-let items = [];
+let items1 = [];
 let items2 = [];
 let items3 = [];
 let items4 = [];
@@ -6,7 +6,7 @@ let items5 = [];
 let items6 = [];
 let items7 = [];
 
-let itemsDiv = document.getElementById("items");
+let items1Div = document.getElementById("items");
 const items2Div = document.getElementById("items2");
 const items3Div = document.getElementById("items3");
 const items4Div = document.getElementById("items4");
@@ -17,7 +17,9 @@ const items7Div = document.getElementById("items7");
 const daySelected = document.getElementById("daySelector")
 const selectedDay = daySelected.value;
 const input = document.getElementById("itemInput");
-const storageKey = "items";
+let storageKey = "items1";
+let items = items1;
+let itemsDiv = items1Div;
 
 
 function renderItems()
@@ -59,8 +61,12 @@ function renderItems()
 }
 function loadItems()
 {
+
     const oldItems = localStorage.getItem(storageKey);
-    if(oldItems) items = JSON.parse(oldItems);
+    if(oldItems)
+    {
+        items = JSON.parse(oldItems);
+    } 
     renderItems()
 }
 function saveItem()
@@ -68,7 +74,9 @@ function saveItem()
     //converts items array to a string
     const stringItems = JSON.stringify(items);
     //override the current array with new items
-    localStorage.setItem(storageKey, stringItems)
+    console.log("saveItem" + storageKey);
+    localStorage.setItem(storageKey, stringItems);
+
 }
 function addItem()
 {
@@ -84,6 +92,7 @@ function addItem()
     //this clears what we type so after we add the item it clears
     //the input box
     input.value = "";
+    console.log("items")
     saveItem();
 }
 function removeItem(idx)
@@ -96,26 +105,48 @@ function removeItem(idx)
 }
 document.addEventListener("DOMContentLoaded", loadItems);
 daySelected.addEventListener('change', function() {
-    const selectedDay = this.value;
+    const selectedDay = this.value.toLowerCase();
     console.log("Newly selected day:", selectedDay);
     switch(selectedDay)
     {
         case 'monday':
             console.log("hello it is monday");
+            items = items1;
+            itemsDiv = items1Div;
+            storageKey = "items1";
             break;
         case 'tuesday':
             console.log("hello it is tuesday");
+            items = items2;
+            itemsDiv = items2Div;
+            storageKey = "items2";
             break;
         case 'wednesday':
+            items = items3;
+            itemsDiv = items3Div;
+            storageKey = "items3";
             break;
-        case 'thurday':
+        case 'thursday':
+            items = items4;
+            itemsDiv = items4Div;
+            storageKey = "items4";
             break;
         case 'friday':
+            items = items5;
+            itemsDiv = items5Div;
+            storageKey = "items5";
             break;
         case 'saturday':
+            items = items6;
+            itemsDiv = items6Div;
+            storageKey = "items6";
             break;
         case 'sunday':
+            items = items7;
+            itemsDiv = items7Div;
+            storageKey = "items7";
             break;
     }
+    loadItems();
 
   });
