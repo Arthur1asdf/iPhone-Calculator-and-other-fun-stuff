@@ -59,25 +59,6 @@ function renderItems()
         itemsDiv.appendChild(container);
     }
 }
-function loadItems()
-{
-
-    const oldItems = localStorage.getItem(storageKey);
-    if(oldItems)
-    {
-        items = JSON.parse(oldItems);
-    } 
-    renderItems()
-}
-function saveItem()
-{
-    //converts items array to a string
-    const stringItems = JSON.stringify(items);
-    //override the current array with new items
-    console.log("saveItem" + storageKey);
-    localStorage.setItem(storageKey, stringItems);
-
-}
 function addItem()
 {
     
@@ -93,7 +74,7 @@ function addItem()
     //the input box
     input.value = "";
     console.log("items")
-    saveItem();
+
 }
 function removeItem(idx)
 {
@@ -101,9 +82,8 @@ function removeItem(idx)
     items.splice(idx, 1);
     //updates the items
     renderItems();
-    saveItem()
+
 }
-document.addEventListener("DOMContentLoaded", loadItems);
 daySelected.addEventListener('change', function() {
     const selectedDay = this.value.toLowerCase();
     console.log("Newly selected day:", selectedDay);
@@ -147,6 +127,5 @@ daySelected.addEventListener('change', function() {
             storageKey = "items7";
             break;
     }
-    loadItems();
 
   });
