@@ -9,51 +9,32 @@
       content="My name is Arthur Teng and I do stuff yeah"
     />
     <title>My first web page</title>
-    <style>
-      img {
-        width: 350px;
-        height: 350px;
-        float: right;
-        object-fit: cover;
-      }
-      .username {
-        font-weight: bold;
-        text-align: center;
-      }
-      em {
-        color: red;
-      }
-      .colorFlipper {
-        clear: both;
-        display: inline-block;
-        padding-right: 2%;
-        padding-left: 1%;
-      }
-      .palindromeChecker {
-        padding-right: 2%;
-      }
-      .randomQuoteGenerator {
-        padding-right: 2%;
-      }
-      .stopWatch {
-        padding-right: 2%;
-      }
-      .todoList {
-        padding-right: 2%;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <p class="username">Hello erm ok what the <em>Flip&copy;</em></p>
-    <a href="/ButtonFun/buttons.html" class="colorFlipper">Color Flipper</a>
-    <a href="/palidromeChecker/main.html" class="palindromeChecker"
+    <a href="/ButtonFun/buttons.html" id="colorFlipper" class="projects"
+      >Color Flipper</a
+    >
+    <a
+      href="/palidromeChecker/main.html"
+      id="palindromeChecker"
+      class="projects"
       >Palindrome Checker</a
     >
-    <a href="/RandomQuoteGenerator/main.html" class="randomQuoteGenerator"
+    <a
+      href="/RandomQuoteGenerator/main.html"
+      id="randomQuoteGenerator"
+      class="projects"
       >Random Quote Generator</a
     >
-    <a href="/Stop Watch/main.html" class="stopWatch">Stop Watch</a>
-    <a href="/todoList/main.html" class="todo List">Todo List</a>
+    <a href="/Stop Watch/main.html" id="stopWatch" class="projects"
+      >Stop Watch</a
+    >
+    <a href="/todoList/main.html" id="todoList" class="projects">Todo List</a>
+    <a href="/appleCalculator/main.html" id="appleCalculator" class="projects"
+      >iPhone Calculator</a
+    >
     <img
       src="/gifs/pokemonGoldIdle.gif"
       alt="pokemon trainer with pokemon standing infront of pond in forest"
