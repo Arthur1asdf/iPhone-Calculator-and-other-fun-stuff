@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <input id="calcDisplay" placeholder="0" readonly />
+      <div id="keys">
+        <button
+          id="clearButton"
+          class="buttonsOnCalc miscButtons"
+          onclick="clearDisplay()"
+        >
+          AC
+        </button>
+        <button class="buttonsOnCalc miscButtons" onclick="swapSigns()">
+          +/-
+        </button>
+        <button onclick="percentage('%')" class="buttonsOnCalc miscButtons">
+          %
+        </button>
+        <button
+          class="buttonsOnCalc operationsButton"
+          onclick="operation('/', this)"
+        >
+          /
+        </button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('7')">7</button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('8')">8</button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('9')">9</button>
+        <button
+          class="buttonsOnCalc operationsButton"
+          onclick="operation('*', this)"
+        >
+          x
+        </button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('4')">4</button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('5')">5</button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('6')">6</button>
+        <button
+          class="buttonsOnCalc operationsButton"
+          onclick="operation('-', this)"
+        >
+          -
+        </button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('1')">1</button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('2')">2</button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('3')">3</button>
+        <button
+          class="buttonsOnCalc operationsButton"
+          onclick="operation('+', this)"
+        >
+          +
+        </button>
+        <button class="buttonsOnCalc zeroButton" onclick="putOnDisplay('0')">
+          0
+        </button>
+        <button class="buttonsOnCalc" onclick="putOnDisplay('.')">.</button>
+        <button class="buttonsOnCalc operationsButton" onclick="calculate()">
+          =
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <
+  </body>
+</html>
