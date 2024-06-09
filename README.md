@@ -3,5 +3,5 @@ Some small projects I did
 ![Screenshot 2024-06-09 123550](https://github.com/Arthur1asdf/iPhone-Calculator-and-other-fun-stuff/assets/138413173/b1e0487a-9a0b-425d-935a-b7c57f5877c2)
 
 
-This calculator basically does what the apple calculator does on the phone mimicing the "features" it has
+This calculator basically does what the apple calculator does on the phone, it has all the "features" it has
 ![Screenshot 2024-06-09 123603](https://github.com/Arthur1asdf/iPhone-Calculator-and-other-fun-stuff/assets/138413173/50842f08-947a-4289-97db-aad6f830dc68)
